@@ -1,3 +1,24 @@
+
+Interfaces:
+
+Kafka control-center
+http://localhost:9021/
+
+Mongodb
+http://localhost:8085/
+admin
+pass
+
+## Reference
+Kafka Connectors:
+https://www.confluent.io/hub/ 
+
+Single Message transformation:
+https://docs.confluent.io/platform/current/connect/transforms/overview.html
+
+## Setup
+
+
 $ docker compose exec -it mysql bash
 
 root@8d2b5f03d304:/# mysql -u root -proot fullcycle
@@ -27,3 +48,8 @@ http://localhost:9021/clusters
 -> Launch
 
 It will be created one topic for each table. As soon as a new data is inserted on the table, it will also be reported to the kafka topic.
+
+Configuring mongodb sync
+
+Follow the same steps as before, however, uploading the following file:
+./connectors/mongodb.properties
